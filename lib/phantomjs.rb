@@ -31,7 +31,8 @@ module Phantomjs
     elsif Os.is_linux?
       require 'phantomjs-linux'
     elsif Os.is_bsd?
-    
+      # TODO: fix it
+      return "/usr/local/bin/phantomjs"
     else
       # Sorry windows guy
       # Nothing here
