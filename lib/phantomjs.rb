@@ -30,6 +30,8 @@ module Phantomjs
       require 'phantomjs-mac'
     elsif Os.is_linux?
       require 'phantomjs-linux'
+    elsif Os.is_bsd?
+    
     else
       # Sorry windows guy
       # Nothing here
@@ -47,6 +49,10 @@ module Os
   # Installing ruby in different manners may give a different result, so beware.
   # Examine the ruby platform yourself. If you see other values please comment
   # in the snippet on dzone and I will add them.
+  
+  def is_bsd?
+    RUBY_PLATFORM.downcase.include?("freebsd")
+  end
 
   def is_mac?
     RUBY_PLATFORM.downcase.include?("darwin")
