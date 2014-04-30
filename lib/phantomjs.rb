@@ -29,7 +29,8 @@ module Phantomjs
     if Os.is_mac?
       require 'phantomjs-mac'
     elsif Os.is_linux?
-      require 'phantomjs-linux'
+      #require 'phantomjs-linux'
+      return '/usr/bin/phantomjs'
     elsif Os.is_bsd?
       # TODO: fix it
       return "/usr/local/bin/phantomjs"
